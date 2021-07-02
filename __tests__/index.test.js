@@ -63,16 +63,6 @@ describe("calculator()", () => {
       const expected = -20;
       expect(actual).toEqual(expected);
     });
-
-    test("should return the first number if there is only one number", () => {
-      const command = "plus";
-      const numbers = ["5"];
-      process.argv.push(command, ...numbers);
-
-      const actual = calculator();
-      const expected = 5;
-      expect(actual).toEqual(expected);
-    });
   });
 
   describe("minus", () => {
@@ -104,16 +94,6 @@ describe("calculator()", () => {
 
       const actual = calculator();
       const expected = 30;
-      expect(actual).toEqual(expected);
-    });
-
-    test("should return the first number if there is only one number", () => {
-      const command = "minus";
-      const numbers = ["5"];
-      process.argv.push(command, ...numbers);
-
-      const actual = calculator();
-      const expected = 5;
       expect(actual).toEqual(expected);
     });
   });

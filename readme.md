@@ -28,7 +28,35 @@ To run the tests, you can run the following command from the command line. You w
 npm test
 ```
 
-This will run the test output.
+This will run the test output once.
+
+#### Run file
+
+If you want to manually test out your file, you can do so by running the following command.
+
+```
+node run.js
+```
+
+Add any arguments you want to test after the filename. For example:
+
+```
+node run.js plus 10 9 8
+```
+
+The output will be printed to your terminal.
+
+#### Test watcher
+
+If you'd like, you can have the tests run constantly. This means that each time you save your file, your tests will re-run. To do so, you can run the following:
+
+```
+npm run watch
+```
+
+Follow the on-screen prompts to exit out of the constant runner.
+
+#### Testing syntax
 
 In order to simulate the command line, you'll see the following lines in the tests:
 
@@ -81,20 +109,6 @@ node index.js minus 10 5 1
 **Command line**
 
 ```
-node index.js plus 1
-```
-
-**Result**
-
-```js
-1;
-```
-
-#### Example 4
-
-**Command line**
-
-```
 node index.js divide 10 2
 ```
 
@@ -104,7 +118,7 @@ node index.js divide 10 2
 "Invalid operation: divide";
 ```
 
-#### Example 5
+#### Example 4
 
 **Command line**
 
@@ -118,7 +132,7 @@ node index.js minus
 "No numbers provided...";
 ```
 
-#### Example 6
+#### Example 5
 
 **Command line**
 
@@ -136,4 +150,4 @@ node index.js
 
 - Remember that the first and second elements of `process.argv` are always the path to the `node` program and the filepath.
 - Remember that each argument from the command line will be read in as a string. You will need some way to convert the inputs from strings to numbers.
-- Because you don't know how many numbers will be passed in, you'll may need to _iterate_ over the numbers.
+- Because you don't know how many numbers will be passed in, you may need to _iterate_ over the numbers.

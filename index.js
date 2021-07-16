@@ -13,10 +13,22 @@ argVArray ['plus', '5', '10'] */
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
+  //First Edge Case - if first element is undefined return 'No operation provided'
+  if (process.argv[2] === undefined) return "No operation provided...";
+  //Second Edge Case - if no numbers are provided
+  if (isNaN(process.argv[3])) return "No numbers provided...";
+
+  //Third Edge Case - if first element is not plus and not minus return 'Invalid operation: [OPERATION NAME]'
+  if (process.argv[2] !== "plus" && process.argv[2] !== "minus") return `Invalid operation: ${process.argv[2]}`;
+  //   if (!validOperations.includes(mathArgs[0])) return
+  //declare a validOperations variable and assign it an array storing 'plus' and 'minus'
+  const validOperations = ["plus", "minus"];
+
   //declare a constant variable and assign it a copy of the things we want from the process.argv array
   const mathArgs = process.argv.slice(2);
   //declare a constant variable called command and assign it MathArgs at index 0
   const command = mathArgs[0].toLowerCase();
+
   //declare a variable named resultOfSumOrDifference and assign it evaluated result of converting MathArgs at index 1 to a number to start off
   let resultOfSumOrDifference = Number(mathArgs[1]);
   //if command is the string value 'plus' and the array length is greater than 3
@@ -50,7 +62,6 @@ function calculator() {
     }
   }
 }
-
 calculator();
 
 // Don't change anything below this line.

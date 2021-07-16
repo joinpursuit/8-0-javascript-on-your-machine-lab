@@ -12,10 +12,17 @@
     let newNum = 0;
 
 
+
+    if(!operation){
+        return "No operation provided...";
+    } 
+    if(!numbers.length){
+        return "No numbers provided...";
+    }
+
     for (let i = 0; i < numbers.length; i++) {
         let number = numbers[i];
         let num = Number(number);
-
 
         if (operation === "plus") {
             newNum += num;
@@ -25,6 +32,8 @@
             } else {
                 newNum -= num;
             }
+        } else{
+            return `Invalid operation: ${operation}`;
         }    
     }
     return newNum;

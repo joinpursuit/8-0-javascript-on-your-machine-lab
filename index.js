@@ -28,7 +28,7 @@ function calculator() {
             initialIntegerTotal = initialIntegerTotal - integer;
         }
         return initialIntegerTotal;
-    }
+    };
 }
 
 console.log(calculator());

@@ -13,12 +13,15 @@ function calculator() {
     let number = 0
     
     if (!command) {
+        
         return ("No operation provided...")
 
     } else if(command !== "plus" && command !== "minus"){
+        
         return (`Invalid operation: ${command}`)
 
     } else if(!process.argv[3]){
+        
         return ("No numbers provided...")
     
     }else if(command === "plus"){
@@ -26,7 +29,7 @@ function calculator() {
         for(let i = 0; i < stringOfNumbers.length; i++) {
     
         number += Number(stringOfNumbers[i])
-        }
+}
     } else if(command === "minus"){
 
         number = stringOfNumbers[0]
@@ -35,9 +38,9 @@ function calculator() {
 
         number -= Number(stringOfNumbers[i])  
 
-        }     
- }
-  
+}     
+    }
+    
     return number
 }
 console.log (calculator()) 

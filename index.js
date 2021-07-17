@@ -44,43 +44,6 @@ console.log (calculator())
 
 
 
-// {
-//     return 
-// } {
-//     return )
-// } {
-// return  
-// }
-
-// if  (command === "plus")
-//     for(i = 0; i < stringOfNumbers.length; i++)
-//         number += Number(stringOfNumbers)
-//     return number; 
-//   if (command === "minus")
-//     for(i = 0; i < stringOfNumbers.length; i++)
-//         number -= Number(stringOfNumbers) 
-//     return number;
-//   if (command !== "plus" || command !== "minus")
-//     for(i = 0; i < stringOfNumbers.length; i++)
-//     return (`Invalid operation: ${command}`) 
-//      if (command === "minus" || command === "plus")
-//         for(i = 0; i < stringOfNumbers.length; i++)
-//             return ("No numbers provided...")
-//     else 
-//     return("No operation provided...")
-
-// for(i = 0; i < numbers.length; i++);{
-//     if  (command === "plus" + numbers){
-//        return number += Number(numbers)}
-// }   if (command === "minus" + numbers)
-//   {    return number -= Number(numbers)
-// }   if (command !== "plus" || command !== "minus"){
-//       return (`Invalid operation: ${command}`) 
-// } if (command === "minus" || command === "plus"){
-//       return ("No numbers provided...")
-// }  else {
-//     return("No operation provided...")
-// }
 
 
 // // Don't change anything below this line.

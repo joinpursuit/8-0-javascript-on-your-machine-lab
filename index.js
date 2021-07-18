@@ -16,7 +16,8 @@ function calculator() {
         let number = numbers[i];
         let num = Number(number);
 
-
+        if (!operation) { 
+            newNum = "no operation provided...";
         if (operation === "plus") {
             newNum += num;
         } else if (operation === "minus") {
@@ -26,12 +27,13 @@ function calculator() {
                 newNum -= num;
             }
         }
-        /*if (operation !== 'plus' || operation !== 'minus') {
+
+       if (!operation) { 
             newNum = "no operation provided...";
         } else if (!numbers) {
             newNum = "No numbers provided...";
         }
-        */
+        
 
 
     }

@@ -10,22 +10,6 @@ function calculator() {
     let numbers = input.slice(3);
     numbers = numbers.map(Number);
     let total = 0;
-
-    // Plus for loop
-    // for (let i = 0; i < numbers.length; i++) {
-    //     total += numbers[i];
-    // }
-    // console.log(total);
-    
-    // Minus for loop
-    // total = numbers[0]; 
-    // for (let i = 1; i < numbers.length; i++) {
-    //     total -= numbers[i];
-    // }
-    // console.log(total);
-
-
-
      if (!operation) {
          return 'No operation provided...';
      } else if (numbers == '') {

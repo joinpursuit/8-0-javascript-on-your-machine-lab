@@ -4,7 +4,33 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    let slicArray= [];
+    process.argv.push(command, ...numbers);
+    slicArray = process.argv.slice(3)
+    slicArray = slicArray.map(Number)
+    for (let i = 0; i < slicArray.length; i++) {
+        //Adding multiple numbers (-+)
+        if (command == 'plus') {
+             outPut = slicArray.reduce(function(a, b){
+                 return a + b;
+              }, 0);
+        }
+        //Subtracting two/multiple numbers (-+)
+        else  if (command == 'minus') {
+            outPut = slicArray.reduce(function(a, b){
+                return a - b;
+              }, 0);
+        } else if (command === 'modulo'){
+        return "Invalid operation: modulo";
+    } else if (command === undefind) {
+        return "No numbers provided...";
+    } else {
+        return "No operation provided..."
+    }
+    return outPut; 
+    }
+}
 
 // Don't change anything below this line.
 module.exports = calculator;

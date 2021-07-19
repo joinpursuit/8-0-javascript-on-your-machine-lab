@@ -8,21 +8,23 @@ function calculator() {
   let inputArr = process.argv;
   let operation = inputArr[2];
   let numbers = inputArr.slice(3);
-  let result;
-
-  for (let i = 0; i < numbers.length; i++) {
-    if (!operation) {
-      console.log("No operation provided...");
-    } else if (!numbers) {
-      console.log("No numbers provided...");
-    } else if (operation === "plus") {
-      result = Number(numbers[i]) + Number(numbers[i]);
-    } else if (operation === "minus") {
-      result = numbers[i] - numbers[i];
+  let result = 0;
+  
+  if (!operation) {
+    console.log("No operation provided...");
+  } else if (!numbers) {
+    console.log("No numbers provided...");
+  } else if (operation === "plus") {
+    for (let i = 0; i < numbers.length; i++) {
+      result += parseInt(numbers[i]);
     }
-
-    console.log(result);
+  } else if (operation === "minus") {
+    result = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+      result -= parseInt(numbers[i]);
+    }
   }
+  console.log(result);
 }
 
 // Don't change anything below this line.

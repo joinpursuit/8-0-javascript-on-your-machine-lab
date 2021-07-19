@@ -11,20 +11,26 @@ function calculator() {
   let result = 0;
   
   if (!operation) {
-    console.log("No operation provided...");
-  } else if (!numbers) {
-    console.log("No numbers provided...");
+    return "No operation provided...";
+  } else if (!numbers.length) {
+    return "No numbers provided...";
   } else if (operation === "plus") {
     for (let i = 0; i < numbers.length; i++) {
-      result += parseInt(numbers[i]);
+      result += Number(numbers[i]);
     }
   } else if (operation === "minus") {
     result = numbers[0];
     for (let i = 1; i < numbers.length; i++) {
-      result -= parseInt(numbers[i]);
+      result -= Number(numbers[i]);
     }
-  }
-  console.log(result);
+      
+    } else {
+        return `Invalid operation: ${operation}`
+    }
+   
+  // console.log(numbers)
+  return result;
+  
 }
 
 // Don't change anything below this line.

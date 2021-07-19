@@ -7,22 +7,24 @@
 function calculator() {
     const operator = process.argv[2];
     const inputs = process.argv.slice(3);
-    let number = 0;
+    let number = Number(inputs[0]);
 
     if(!operator) {
         return 'No operation provided...'
+
+    } else if (!inputs.length) {
+        return 'No numbers provided...'
     }
     
-    if(operator === 'plus' && inputs.length) {
-        for(let i = 0; i < inputs.length; i++) {
+    if(operator === 'plus') {
+        for(let i = 1; i < inputs.length; i++) {
             
             number += Number(inputs[i]);
         }
         return number;
 
 
-    } else if (operator === 'minus' && inputs.length) {
-        number = Number(inputs[0]);
+    } else if (operator === 'minus') {
         for(let i = 1; i < inputs.length; i++) {
             
            number -= Number(inputs[i]);
@@ -39,11 +41,8 @@ function calculator() {
     } else if (operator === 'modulo') {
         return 'Invalid operation: modulo'
 
-    } else {
-        return 'No numbers provided...'
     }
-
-    return 'done'
+    
 }
 
 

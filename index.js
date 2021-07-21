@@ -8,8 +8,11 @@
 
 function calculator() {
 const operator = process.argv[2]
-const numArray = process.argv.slice(3)
-const num = numArray.map((element) => Number(element))
+let numArray = process.argv.slice(3)
+// Fancy Way
+//const num = numArray.map((element) => Number(element))
+// Fundamental Way
+let total = 0;
 
 if (!operator) {
     return "No operation provided...";
@@ -18,15 +21,24 @@ if (!operator) {
 if (operator !== 'plus' && operator !== 'minus') {
     return input = `Invalid operation: ${operator}`;
 } else {
-    for (let i of num) {
-        if (!i) { 
+    for (let num of numArray) {
+         num = Number(num)
+        if (!num) { 
             return "No numbers provided...";
         } else if (operator === 'plus') {
-            const add = (accumulator, i) => accumulator + i;
-            return num.reduce(add);
+            // Fancy Way
+            // const add = (accumulator, i) => accumulator + i;
+            // return num.reduce(add);
+
+            // Fundamental Way
+            total += num
         } else if (operator === 'minus') {
-            const subtract = (accumulator, i) => accumulator - i;
-            return num.reduce(subtract);
+            // Fancy Way
+            // const subtract = (accumulator, i) => accumulator - i;
+            // return num.reduce(subtract);
+
+            // Fundamental Way
+            total -= num
             } return "No numbers provided..."
         }
         return "No numbers provided..." 

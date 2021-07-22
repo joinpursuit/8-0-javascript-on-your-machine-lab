@@ -19,6 +19,7 @@
 //Because you don't know how many numbers will be passed in, you may need to iterate over the numbers.
 
 
+
 function calculator() {
     const operator = process.argv[2]
     const numArray = process.argv.slice(3)
@@ -29,23 +30,22 @@ function calculator() {
     };
     
     if (operator !== 'plus' && operator !== 'minus') {
-        return input = `Invalid operation: ${operator}`;
+        return `Invalid operation: ${operator}`;
     } else {
         for (let i of num) {
             if (!i) { 
-                return "No numbers provided...";
             } else if (operator === 'plus') {
                 const add = (accumulator, i) => accumulator + i;
                 return num.reduce(add);
             } else if (operator === 'minus') {
                 const subtract = (accumulator, i) => accumulator - i;
                 return num.reduce(subtract);
-                } return "No numbers provided..."
+                } else {
+                return "No numbers provided..."
             }
-            return "No numbers provided..." 
         }
     }
-    
+}
 
 // plus
 // 4. should add up two numbers
@@ -58,36 +58,6 @@ function calculator() {
 // 7. should subtract two numbers
 // 8. should subtract multiple numbers
 // 9. should subtract negative numbers
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function calculator() {
-// const calcArray = process.argv.slice(3)
-// let operator = process.argv[2]
-// operator = "";
-// if (!operator.imcludes('plus','minus')) {
-//     return "No operations provided..."
-// } else {
-//    for (let elements of calcArray) {
-//        let num = command.process.argv[2]
-//    }
-// }
-// }
-
-
-
-
-
 
 
 

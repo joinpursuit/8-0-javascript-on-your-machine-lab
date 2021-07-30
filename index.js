@@ -39,11 +39,10 @@ function calculator() {
                 return num.reduce(add);
             } else if (operator === 'minus') {
                 const subtract = (accumulator, i) => accumulator - i;
-                return num.reduce(subtract);
-                } else {
-                return "No numbers provided..."
+                return num.reduce(subtract);    
             }
         }
+        return "No numbers provided..."
     }
 }
 

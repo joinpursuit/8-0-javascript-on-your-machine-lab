@@ -7,13 +7,14 @@
 function calculator() {
   let symbol = process.argv[2];
   let numbers = [];
+  let sum = 0;
+  let diff;
   //console.log(process.argv);
 
   //Error checking
   if (symbol == undefined) {
     return "No operation provided...";
   } else if (symbol !== 'plus' && symbol !== 'minus') {
-    console.log(symbol);
     return `Invalid operation: ${symbol}`;
   }
 
@@ -22,13 +23,18 @@ function calculator() {
     return "No numbers provided..."
   }
 
-  function numberArray() {
-
+  if (symbol == 'plus') {
+    for (let i = 3; i < process.argv.length; i++) {
+      sum += Number(process.argv[i]);
+    }
+    return sum;
+  } else if (symbol == 'minus') {
+    diff = process.argv[3]
+    for (let c = 4; c < process.argv.length; c++) {
+      diff -= Number(process.argv[c]);
+    }
+    return diff;
   }
-
-  function addition(numbers) {}
-
-  function subtraction(numbers) {}
 }
 
 // Don't change anything below this line.

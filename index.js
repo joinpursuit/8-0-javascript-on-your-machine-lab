@@ -23,7 +23,6 @@ function calculator() {
     //pulls out numeric value (Number) from array
     let result = Number(numArr[0]);
     //pulls out numeric value (Number) from array
-    let result = Number(numArr[0]);
     if (!operator) {
         result = "No operation provided...";    
     } else if (numArr.length === 0) {
@@ -34,7 +33,7 @@ function calculator() {
         }
     } else if (operator === "minus") {
         for(let i = 1; i < numArr.length; i++) {
-        result -+ Number(numArr[i]);
+        result -= Number(numArr[i]);
         }
     } else if (operator !== "plus" && operator !== "minus") {
         result = `Invalid operation: ${operator}`;

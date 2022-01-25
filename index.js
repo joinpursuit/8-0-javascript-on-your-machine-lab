@@ -24,13 +24,12 @@ function calculator() {
         let number = process.argv[3];
     
     for(let i=4;i < process.argv.length;i++){
-        number -= Number(process.argv[i])
-        console.log(number)
+        number -= Number(process.argv[i]);
     }
     return number;
     }
     
-    if(process.argv[2] !== "plus" ||"minus"){
+    if(process.argv[2] !== "plus" || "minus"){
         return `Invalid operation: ${process.argv[2]}`;
     }
 

@@ -5,31 +5,34 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-    let symbol = process.argv[1];
-    process.argv.shift();
-    let numbers = process.argv;
-    console.log(numbers);
-if (symbol == 'plus'){
+  let symbol = process.argv[2];
+  let numbers = [];
+
+  console.log(symbol);
+  if (symbol == "plus") {
     //this will be the addition. there will need to be a loop
     console.log("I found an addition symbol");
-} else if (symbol == 'minus'){
+    for (let i = 3; i < process.argv.length; i++) {
+      numbers.push(process.argv[i]);
+    }
+    console.log(numbers);
+  } else if (symbol == "minus") {
     //this will be subtraction. again, gonna need a loop.
     console.log("I found a subtraction symbol");
-} else if (symbol != '+' || symbol != '-'){
-    return "No operation provided..."
+    for (let i = 3; i < process.argv.length; i++) {
+      numbers.push(process.argv[i]);
+    }
+    console.log(numbers);
+  } else if (typeof(symbol)=='number') {
+    return "No operation provided...";
+  } else if (symbol !== "plus" || symbol !== "minus") {
+    return "Invalid operation: modulo";
+  }
+
+  function addition(numbers) {}
+
+  function subtraction(numbers) {}
 }
-
-function addition(numbers){
-
-}
-
-function subtraction(numbers){
-
-}
-
-}
-
-
 
 // Don't change anything below this line.
 module.exports = calculator;

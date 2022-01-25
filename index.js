@@ -5,7 +5,7 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-    let symbol = process.argv[0];
+    let symbol = process.argv[1];
     process.argv.shift();
     let numbers = process.argv;
     console.log(numbers);

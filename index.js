@@ -9,33 +9,33 @@ function calculator() {
   let numbers = [];
   let sum = 0;
   let diff;
-  //console.log(process.argv);
 
   //Error checking
   if (symbol == undefined) {
     return "No operation provided...";
-  } else if (symbol !== 'plus' && symbol !== 'minus') {
+  } else if (symbol !== "plus" && symbol !== "minus") {
     return `Invalid operation: ${symbol}`;
   }
 
   //Number checking
   if (process.argv.length < 4) {
-    return "No numbers provided..."
+    return "No numbers provided...";
   }
 
-  if (symbol == 'plus') {
+  if (symbol == "plus") {
     for (let i = 3; i < process.argv.length; i++) {
       sum += Number(process.argv[i]);
     }
     return sum;
-  } else if (symbol == 'minus') {
-    diff = process.argv[3]
+  } else if (symbol == "minus") {
+    diff = process.argv[3];
     for (let c = 4; c < process.argv.length; c++) {
       diff -= Number(process.argv[c]);
-    }
+    } 
     return diff;
   }
 }
+
 
 // Don't change anything below this line.
 module.exports = calculator;

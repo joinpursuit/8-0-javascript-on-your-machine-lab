@@ -5,6 +5,9 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
+    let num
+
+    return num;
     
 }
 

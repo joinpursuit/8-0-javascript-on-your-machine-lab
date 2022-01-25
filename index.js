@@ -6,7 +6,8 @@
  */
 function calculator() {
     let symbol = process.argv[0];
-    let numbers = process.argv.shift();
+    process.argv.shift();
+    let numbers = process.argv;
     console.log(numbers);
 if (symbol == '+'){
     //this will be the addition. there will need to be a loop

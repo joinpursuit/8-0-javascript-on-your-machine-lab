@@ -11,95 +11,34 @@ function calculator(command, num1, num2) {
     console.log(process.argv);
 
     command = process.argv[2];
-    let sum = 0;
-    let diff = '';
+    let start = Number(process.argv[3]);
+    
 
     if (command === 'plus') {
-        for (let i = 3; i < process.argv.length ; i++) {
-            sum += Number(process.argv[i]);
+        for (let i = 4; i < process.argv.length ; i++) {
+            start += Number(process.argv[i]);
         }
-        return sum; // works for adding two numbers w/ command = plus
+        return start; // works for adding two numbers w/ command = plus
+    
     } else if (command === 'minus') {
-        for (let i = 3; i < process.argv.length ; i++) {
-            diff -= process.argv[i];
+        for (let i = 4; i < process.argv.length ; i++) {
+            start -= Number(process.argv[i]);
         }
-        return Number(diff);
+        return start; // works for subtracting any amount of #'s w/command = minus
+    
+    } else if (isNaN(command)) {
+        if (command !== 'minus' && command !== 'plus') {
+            return `Invalid operation: ${command}` ;
+        } else if (!isNaN(command)) {
+            return "No operation provided..." ;
+        } else {}
+        return "No numbers provided..." ;
+
+    } else {
+        console.log(process.argv);
     }
-
-
-
-    //sum += Number(process.argv[i]); //correct order
-    
-    //let diff = 0;
-
-    // if (command === 'plus'){
-    //     if (num1 && num2){
-    //         for (let i = 3; i < process.argv.length; i++) {
-    //             let sum = 0;
-    //             sum += Number(process.argv[i]);
-            
-    //         }
-    //      return sum
-    //     }
-
-       //return sum 
-    //} 
-
-    console.log(sum);
-
-// if minus were gonna subtract
-//if add. we add
-
-// write code that will execute no matter how many numbers are input
-//an array 
-// include a loop? .length (process.argv)
-
-//Kinda Works
-    // if (command === 'plus') { 
-    //     for (let i = 3; i < process.argv.length; i++) {
-//             sum += Number(process.argv[i]);
-//         }
-//         return sum;
-//     } else if (command === 'minus'){
-//         for (let i = 3; i < process.argv.length; i++) {
-//             diff -= Number(process.argv[i]);
-//         }
-//         return diff;
-//     } else if (!command) {
-//         return "No operation provided..."
-//     } else if (!num1 && !num2) {
-//         return "No numbers provided..."
-//     } else if (command !== 'plus' && command !== 'minus'){
-//         return `Invalid operation: ${command}`
-//     }
-// }
-
-//Doesn't work
-    // if (command === 'plus') { 
-    //     if (num1 && num2) {
-    //         for (let i = 3; i < process.argv.length; i++) {
-    //         sum += Number(process.argv[i]);
-    //         }
-    //     }
-    //     return sum;
         
-    // } else if (command === 'minus'){
-    //     if (num1 && num2) {
-    //         for (let i = 3; i < process.argv.length; i++) {
-    //             diff -= Number(process.argv[i]);
-    //         }
-    //     }
-    //     return diff;
-          
-    // } else if (!command && !num1 && !num2) {
-    //     return "No operation provided..."    
-    // } else if (command !== 'plus' && command !== 'minus'){
-    //     return `Invalid operation: ${command}`
-    // } else {
-    //     return "No numbers provided...";
-    //}
- 
-    
+
 
 
 }

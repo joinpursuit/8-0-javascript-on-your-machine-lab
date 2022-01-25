@@ -4,7 +4,28 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    let symbol = process.argv[0];
+    let numbers = process.argv.shift();
+if (symbol == '+'){
+    //this will be the addition. there will need to be a loop
+    console.log("I found an addition symbol");
+} else if (symbol == '-'){
+    //this will be subtraction. again, gonna need a loop.
+    console.log("I found a subtraction symbol");
+}
+
+function addition(numbers){
+
+}
+
+function subtraction(numbers){
+
+}
+
+}
+
+
 
 // Don't change anything below this line.
 module.exports = calculator;

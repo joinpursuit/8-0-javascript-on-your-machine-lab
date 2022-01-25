@@ -12,20 +12,40 @@ function calculator(command, num1, num2) {
 
     command = process.argv[2];
     let sum = 0;
+    let diff = '';
+
+    if (command === 'plus') {
+        for (let i = 3; i < process.argv.length ; i++) {
+            sum += Number(process.argv[i]);
+        }
+        return sum; // works for adding two numbers w/ command = plus
+    } else if (command === 'minus') {
+        for (let i = 3; i < process.argv.length ; i++) {
+            diff -= process.argv[i];
+        }
+        return Number(diff);
+    }
+
+
+
+    //sum += Number(process.argv[i]); //correct order
+    
     //let diff = 0;
 
-    if (command === 'plus'){
-        if (num1 === true && num2 === true){
-            for (let i = 3; i < process.argv.length; i++) {
-                sum += Number(process.argv[i]);
-            }
-        //return sum
-        }
+    // if (command === 'plus'){
+    //     if (num1 && num2){
+    //         for (let i = 3; i < process.argv.length; i++) {
+    //             let sum = 0;
+    //             sum += Number(process.argv[i]);
+            
+    //         }
+    //      return sum
+    //     }
 
-       return sum 
-    } 
+       //return sum 
+    //} 
 
-
+    console.log(sum);
 
 // if minus were gonna subtract
 //if add. we add

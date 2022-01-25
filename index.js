@@ -9,10 +9,10 @@ function calculator() {
     process.argv.shift();
     let numbers = process.argv;
     console.log(numbers);
-if (symbol == '+'){
+if (symbol == 'plus'){
     //this will be the addition. there will need to be a loop
     console.log("I found an addition symbol");
-} else if (symbol == '-'){
+} else if (symbol == 'minus'){
     //this will be subtraction. again, gonna need a loop.
     console.log("I found a subtraction symbol");
 } else if (symbol != '+' || symbol != '-'){

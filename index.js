@@ -7,26 +7,23 @@
 function calculator() {
   let symbol = process.argv[2];
   let numbers = [];
+  //console.log(process.argv);
 
-  console.log(symbol);
-  if (symbol == "plus") {
-    //this will be the addition. there will need to be a loop
-    console.log("I found an addition symbol");
-    for (let i = 3; i < process.argv.length; i++) {
-      numbers.push(process.argv[i]);
-    }
-    console.log(numbers);
-  } else if (symbol == "minus") {
-    //this will be subtraction. again, gonna need a loop.
-    console.log("I found a subtraction symbol");
-    for (let i = 3; i < process.argv.length; i++) {
-      numbers.push(process.argv[i]);
-    }
-    console.log(numbers);
-  } else if (typeof(symbol)=='number') {
+  //Error checking
+  if (symbol == undefined) {
     return "No operation provided...";
-  } else if (symbol !== "plus" || symbol !== "minus") {
-    return "Invalid operation: modulo";
+  } else if (symbol !== 'plus' && symbol !== 'minus') {
+    console.log(symbol);
+    return `Invalid operation: ${symbol}`;
+  }
+
+  //Number checking
+  if (process.argv.length < 4) {
+    return "No numbers provided..."
+  }
+
+  function numberArray() {
+
   }
 
   function addition(numbers) {}

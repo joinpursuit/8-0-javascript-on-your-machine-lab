@@ -13,6 +13,8 @@ if (symbol == '+'){
 } else if (symbol == '-'){
     //this will be subtraction. again, gonna need a loop.
     console.log("I found a subtraction symbol");
+} elseif (symbol != '+' || symbol != '-'){
+    return "No operation provided..."
 }
 
 function addition(numbers){

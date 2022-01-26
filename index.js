@@ -7,22 +7,29 @@
 function calculator() {
     const operator = process.argv[2]
     const arr = process.argv.slice(3)
-    for (let i = 0; i < arr.length; i++){
-        let sum = 0
-        let diff = 0
-        let num = parseInt(arr[i])
-     if(operator === "plus") {
-        return  sum += num
-    } else if(operator === "minus") {
-        return diff -= num
-    } else if(operator !== "plus" || "minus"){
-        return "Invalid operation: " + operator
-    } else if (operator === null){
+    if(operator === undefined){
         return `No operation provided...`
-    } else if (num === null){
+    }
+    if(arr[0] === undefined){
         return `No numbers provided...`
-}
-}
+    }
+    if(operator === "plus"){
+        let sum = 0 
+        for (let i = 0; i < arr.length; i++){
+            sum += parseInt(arr[i])
+        }
+        return sum 
+    } 
+        if(operator === "minus"){
+        let difference = arr[0]
+        for (let i = 1; i < arr.length; i++){
+            difference -= parseInt(arr[i])
+        }
+        return difference 
+    }
+    if(operator !== "plus" || "minus"){
+        return "Invalid operation: " + operator
+    }
 }
 calculator();
 

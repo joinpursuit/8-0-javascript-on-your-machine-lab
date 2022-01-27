@@ -7,10 +7,10 @@
 
  function calculator() {
     let total=0
-    let ops=['minus','plus']
+   
     const operation=process.argv[2]
     const argsList=process.argv
-    const numbers=argsList.slice(3)
+     const numbers=argsList.slice(3)
 
 
     if(process.argv.length ===2 ) {

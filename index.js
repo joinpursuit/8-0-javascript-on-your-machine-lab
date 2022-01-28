@@ -8,14 +8,11 @@ function calculator() {
     if (process.argv.length <= 2) {
         return "No operation provided...";
 
-    } else if (process.argv[2] === "modulo") {
-          return "Invalid operation: modulo";
-
-    } else if (process.argv[2] === "divide") {
-        return "Invalid operation: divide";
-
     } else if (process.argv.length <= 3) {
         return "No numbers provided...";
+
+    } else if ((process.argv[2] !== "plus") && (process.argv[2] !== "minus")) {
+          return `Invalid operation: ${process.argv[2]}`;
 
     } else if (process.argv[2] === "plus") {
         let sum = 0;

@@ -2,7 +2,6 @@ const calculator = require("../");
 const resetArgV = () => {
   process.argv = ["/path/to/node", "/path/to/file"];
 };
-
 describe("calculator()", () => {
   describe("error handling", () => {
     beforeEach(resetArgV);

@@ -18,20 +18,23 @@ function calculator() {
         return 'Invalid operation: modulo';
 
     } else if (input === 'plus') {
-        let num = 0;
-        for (let i = 3; i < process.argv.length; i++) {
+         num = 0;
+        for (i = 3; i < process.argv.length; i++) {
          num += Number(process.argv[i]);
-          return num; 
-}       
-        
-    } else if (process.argv === 'minus') {
-        let diff = (process.argv[3]);
-        
-        for (let i = 4; i < process.argv.length; i--) {
-           diff -= Number(process.argv[i]);
-             return diff;
         }
+
+           return num; 
+      
         
+    } else if (input === 'minus') {
+         diff = (process.argv[3])
+        
+        for (i = 4; i < process.argv.length; i++) {
+          diff -= Number(process.argv[i]);
+           
+          
+        }
+        return diff;
     
     }
 

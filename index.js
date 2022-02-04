@@ -17,11 +17,11 @@
 function calculator() {
     let result = 0;
 if(process.argv.length < 3) {
-    return `No operation provided...`
+    return `No operation.`
 } 
 if(process.argv[2] === 'plus' || process.argv[2] === 'minus'){
  if(process.argv.length <= 3){
-    return `No numbers provided...`;
+    return `No numbers`;
  }
 } 
 if(process.argv[2] === 'plus'){

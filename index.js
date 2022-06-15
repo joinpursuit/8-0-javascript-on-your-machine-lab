@@ -7,7 +7,7 @@
 function calculator() {
     console.log(process.argv)
     // console.log(process.argv[2])
-
+    //
     if(process.argv[2] === `plus`){
 
         let sum = 0

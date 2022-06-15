@@ -4,7 +4,25 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    console.log(process.argv)
+    // console.log(process.argv[2])
+
+    if(process.argv[2] === 'plus'){
+
+        let sum = 0
+        
+        for (let i = 3; i < process.argv.length; i++) {
+           // sum += Number(process.argv[i])
+           sum += parseInt(process.argv[i])
+        }
+        return sum
+
+
+    } else {
+        null
+    }
+}
 
 // Don't change anything below this line.
 module.exports = calculator;

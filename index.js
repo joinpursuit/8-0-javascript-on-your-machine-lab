@@ -12,12 +12,12 @@ function calculator() {
         return `No numbers provided...`
     }
     if(process.argv[2] === 'plus'){
-        let sum = 0
+         let sum = 0
         for(let i = 3; i < process.argv.length; i++ ){
-             sum += Number(process.argv[i])
-              }
-    return sum
-    }
+              sum += Number(process.argv[i])
+               }
+     return sum
+     }
      else if (process.argv[2] === 'minus') {
         let sum = process.argv[3]
          for(let i = 4; i < process.argv.length; i++)

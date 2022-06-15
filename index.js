@@ -18,12 +18,12 @@ function calculator() {
                }
      return sum
      }
-     else if (process.argv[2] === 'minus') {
+      else if (process.argv[2] === 'minus') {
         let sum = process.argv[3]
-         for(let i = 4; i < process.argv.length; i++)
+          for(let i = 4; i < process.argv.length; i++)
           {
-             sum -=  Number(process.argv[i])
-         }
+              sum -=  Number(process.argv[i])
+          }
          return sum
         }
     else if(process.argv !== 'minus' || process.argv !== 'plus'){

@@ -7,6 +7,12 @@
 function calculator() {
     console.log(process.argv)
     // console.log(process.argv[2])
+     if(process.argv.length === 3 ){
+        return `No numbers provided...`
+    }
+    if (!process.argv[2]){
+        return `No operation provided...`
+    }
     if (process.argv[2] === `plus`){
         let sum = 0
     
@@ -15,19 +21,17 @@ function calculator() {
             sum += parseInt(process.argv[i])
         }
         return sum;
-    }else if (process.argv[2] === `minus`){
+    } if (process.argv[2] === `minus`){
         let sum = process.argv[3]
         for (let j = 4; j < process.argv.length; j++) {
             sum -= parseInt(process.argv[j]);
             
         }
         return sum;
-} else if (!process.argv[2]){
-    return `No operation provided...`
-}else if(!process.argv[3]){
-    return `No numbers provided...`
-}else if (process.argv[2] !== 'plus' || process.argv[2] !=='minus'){
+}  
+ if (process.argv[2] !== 'plus' || process.argv[2] !=='minus'){
     return `Invalid operation: modulo`
+
 }
 }
 

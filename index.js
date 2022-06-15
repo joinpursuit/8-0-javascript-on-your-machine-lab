@@ -5,10 +5,12 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-
-      
-
-      if (process.argv[2] === 'plus'){
+if (!process.argv[2]){
+    return "No operation provided..."
+}
+if (process.argv.length === 3){
+    return "No numbers provided..."
+} if (process.argv[2] === "plus"){
 
         let sum = 0
     
@@ -18,20 +20,22 @@ function calculator() {
     }
     return sum
     
-     } else if (process.argv[2] === 'minus'){
-    
-        let diff  = 0
-    
-    for (let i = 3; i < process.argv.length; i++){
+     } 
+     if (process.argv[2] === 'minus'){
+
+        let diff = process.argv[3]
+    for (let i = 4; i < process.argv.length; i++){
         // diff-= Number(process.argv[i])
     diff -= parseInt(process.argv[i])
     }
     return diff
      }
     
-    }
-
-    console.log(process.argv)
+    if (process.argv[2] !== "plus" || process.argv[2] !== "minus"){
+        return "Invalid operation: modulo"
+        }
+}
+    //console.log(process.argv)
 
 // Don't change anything below this line.
 module.exports = calculator;

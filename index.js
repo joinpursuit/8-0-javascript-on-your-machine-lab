@@ -7,20 +7,33 @@
 function calculator() {
     console.log(process.argv)
     // console.log(process.argv[2])
-
-    if(process.argv[2] === 'plus'){
-
-        let sum = 0
-        
-        for (let i = 3; i < process.argv.length; i++) {
-           // sum += Number(process.argv[i])
-           sum += parseInt(process.argv[i])
-        }
-        return sum
-
-
-    } else {
-        null
+    if(process.argv.length === 3){
+        return 'No numbers provided...'
+    }
+    if (!process.argv[2]){
+        return 'No operation provided...'
+    }
+        if(process.argv[2] === 'plus'){
+    
+            let sum = 0
+            
+            for (let i = 3; i < process.argv.length; i++) {
+               // sum += Number(process.argv[i])
+               sum += parseInt(process.argv[i])
+            }
+            return sum
+    
+    
+        } else if (process.argv[2] === 'minus'){
+            
+            let sum = process.argv[3]
+    
+            for (let o = 4; o < process.argv.length; o++) {
+                sum -= parseInt(process.argv[o])
+            }
+            return sum
+    } else if(process.argv[2] !== "plus" || process.argv[2] !== "minus"){
+        return "Invalid operation: modulo"
     }
 }
 

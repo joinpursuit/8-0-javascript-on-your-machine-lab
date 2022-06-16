@@ -23,6 +23,6 @@ function calculator(){
         } return sum;
     }
 }
-
+// console.log(calculator())
 // Don't change anything below this line.
 module.exports = calculator;

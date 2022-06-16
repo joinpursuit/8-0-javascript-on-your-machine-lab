@@ -4,7 +4,45 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    function operationFunc(instruction,numArr)
+    {
+        let operator = {plus:"+",minus:"-",divide:"/",multiply:"*"};
+        let total=numArr.shift();
+        for(let x of numArr)
+        {
+            if(typeof Number(x)==="number")
+            {
+                total=eval(`${total} ${operator[instruction]} ${x}`);
+            }
+        }
+        return total;
+    }
+    let instruction = process.argv[2];
+    let numArr = process.argv.slice(3);
+    let result = 0;
+    if(process.argv.length<3)
+    {
+        return "No operation provided...";
+    }
+    if(numArr.length===0)
+    {
+        return "No numbers provided...";
+    }
+    
+    
+    switch(instruction)
+    {
+        case "plus":case "minus":case "divide":case "multiply":
+            //
+            result = operationFunc(instruction,numArr);
+        break;
+        default:
+            //
+            result = `Invalid operation: ${instruction}`;
+    }
+    return result;
+}
 
 // Don't change anything below this line.
 module.exports = calculator;

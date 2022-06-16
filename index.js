@@ -11,7 +11,7 @@ function calculator() {
         let total=numArr.shift();
         for(let x of numArr)
         {
-            if(typeof Number(x)==="number")
+            if(!isNaN(x))
             {
                 total=eval(`${total} ${operator[instruction]} ${x}`);
             }

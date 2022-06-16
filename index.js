@@ -8,7 +8,21 @@ function calculator() {
     function operationFunc(instruction,numArr)
     {
         let operator = {plus:"+",minus:"-",divide:"/",multiply:"*"};
-        let total=numArr.shift();
+        let total=NaN;
+        for(let x of numArr)
+        {
+            //pull the first number
+            if(!isNaN(x))
+            {
+                total=numArr.shift();
+                break;
+            }
+            else// if x is not a number remove it
+            {
+                numArr.shift();
+            }
+        }
+        //pull the rest
         for(let x of numArr)
         {
             if(!isNaN(x))
@@ -29,7 +43,6 @@ function calculator() {
     {
         return "No numbers provided...";
     }
-    
     
     switch(instruction)
     {

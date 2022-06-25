@@ -23,7 +23,7 @@ let result = Number(arr[0])
     } else if(prompt !== "plus" && prompt !== "minus"){
         result = `Invalid operation ${prompt}`
     }
-    return result
+    return result;
 };
 
 

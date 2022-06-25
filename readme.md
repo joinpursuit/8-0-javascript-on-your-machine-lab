@@ -43,7 +43,7 @@ Add any arguments you want to test after the filename. For example:
 ```
 node run.js plus 10 9 8
 ```
-
+       
 The output will be printed to your terminal.
 
 #### Test watcher
@@ -52,7 +52,7 @@ If you'd like, you can have the tests run constantly. This means that each time 
 
 ```
 npm run watch
-```
+```               
 
 Follow the on-screen prompts to exit out of the constant runner.
 

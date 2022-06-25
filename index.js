@@ -10,13 +10,25 @@ let numsArr = process.argv.slice(3).map(Number);
 let sum = 0 ;    
 console.log(numsArr);
 
-if (!operator){
+if(!operator){
     return "No operation provided...";
 } else if(!numsArr.length){
     return "No numbers provided...";
-}  else {
-    return "Invalid operation: modulo";
+} else if(operator === "plus"){
+    // for(let i = 0; i < numsArr.length; i++){
+    //    sum += numsArr[i]
+    //  } 
+    //  return sum 
+    return numsArr.reduce((a,b)=> a + b)
+} else if(operator === 'minus'){
+    // for(let i = 0; i < numsArr.length; i++){
+    //     sum -=
+    // }
+    return numsArr.reduce((a,b)=> a - b)
 }
+else {
+    return `Invalid operation: ${operator}`;
+}   
 };
 
 

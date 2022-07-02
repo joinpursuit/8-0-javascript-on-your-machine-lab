@@ -2,8 +2,8 @@ const calculator = require("../");
 const resetArgV = () => {
   process.argv = ["/path/to/node", "/path/to/file"];
 };
-
-describe("calculator()", () => {
+//jfktyfiytfuytrutrdutyiytfityfiytftyudrftghjklasdfghjklsfghjksdfghjkdfghjhbkbhjhbiuiknb
+describe.only("calculator()", () => {
   describe("error handling", () => {
     beforeEach(resetArgV);
     test("should return an error message if no operation is provided", () => {
@@ -31,7 +31,7 @@ describe("calculator()", () => {
       expect(actual).toEqual(expected);
     });
   });
-
+//jfktyfiytfuytrutrdutyiytfityfiytftyudrftghjklasdfghjklsfghjksdfghjkdfghkjhgkjhkjhkjbkbkbkjbkj
   describe("plus", () => {
     beforeEach(resetArgV);
     test("should add up two numbers", () => {
@@ -64,6 +64,7 @@ describe("calculator()", () => {
       expect(actual).toEqual(expected);
     });
   });
+//jfktyfiytfuytrutrdutyiytfityfiytftyudrftghjklasdfghjklsfghjksdfghjkdfgh
 
   describe("minus", () => {
     beforeEach(resetArgV);

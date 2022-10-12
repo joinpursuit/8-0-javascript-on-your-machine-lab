@@ -5,19 +5,19 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-   /* let result = 0 ;
+    let result = 0 ;
     if (process.argv[2] === 'plus') {
           for (i = 3 ; i < process.argv.length ; i++) {
             result+= parseInt(process.argv[i])
         } 
         
-     }*/ if (process.argv[2] === 'minus') {
+     } if (process.argv[2] === 'minus') {
         result = parseInt(process.argv[3]);
           for (i = 4 ; i < process.argv.length ; i++) {
            result -= parseInt(process.argv[i])
         
           }
-     }
+     } return result 
 }
 
 // Don't change anything below this line.

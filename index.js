@@ -5,7 +5,7 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-    let result = 0 ;
+   let result = 0 ;
     if (process.argv[2] === 'plus') {
           for (i = 3 ; i < process.argv.length ; i++) {
             result+= parseInt(process.argv[i])
@@ -17,8 +17,19 @@ function calculator() {
            result -= parseInt(process.argv[i])
         
           }
-     } return result 
-}
+     } else if (!process.argv[2] === 'plus' || !process.argv[2] === 'minus') {
+        result = "Invalid operation:" + process.argv[2];
+     } else if (process.argv.length === 3) {
+        result = "No numbers provided...";
+     } else {result = "No operation provided..."}
+       
+} 
+
+
+"No numbers provided..."
+
+
+
 
 // Don't change anything below this line.
 module.exports = calculator;

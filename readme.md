@@ -1,4 +1,4 @@
-# JavaScript on Your Machine Lab
+n# JavaScript on Your Machine Lab
 
 In this lab, you'll be building a small calculator function. Don't worry, your calculator will only need to add up numbers or subtract numbers. But, it will be doing it all from the command line!
 

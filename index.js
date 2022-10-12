@@ -6,7 +6,13 @@
  */
 function calculator() {
    let result = 0 ;
-    if (process.argv[2] === 'plus') {
+   if (!process.argv[2] === 'plus' || !process.argv[2] === 'minus') {
+    result = "Invalid operation:" + process.argv[2];
+ } if (process.argv.length === 3) {
+    result = "No numbers provided...";
+ } if (process.argv.length === 2) {
+    result = "No operation provided..."}
+   if (process.argv[2] === 'plus') {
           for (i = 3 ; i < process.argv.length ; i++) {
             result+= parseInt(process.argv[i])
         } 
@@ -17,16 +23,12 @@ function calculator() {
            result -= parseInt(process.argv[i])
         
           }
-     } else if (!process.argv[2] === 'plus' || !process.argv[2] === 'minus') {
-        result = "Invalid operation:" + process.argv[2];
-     } else if (process.argv.length === 3) {
-        result = "No numbers provided...";
-     } else {result = "No operation provided..."}
-       return result 
+     }
+     return result 
 }    
  
 
-"No numbers provided..."
+
 
 
 

@@ -22,9 +22,9 @@ function calculator() {
      } else if (process.argv.length === 3) {
         result = "No numbers provided...";
      } else {result = "No operation provided..."}
-       
-} 
-
+       return result 
+}    
+ 
 
 "No numbers provided..."
 

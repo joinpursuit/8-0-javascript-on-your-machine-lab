@@ -8,7 +8,7 @@ function calculator() {
     let result = 0
     if (process.argv[2] !== "plus" && process.argv[2] !== "minus" ){
         result = "Invalid operation: " + (process.argv[2])
-    } if (prprocess.argv.length === 3){
+    } if (process.argv.length === 3){
         result = "No numbers provided..."
     } if (process.argv.length === 2){
         result = "No operation provided..."
@@ -25,8 +25,8 @@ function calculator() {
     
     } if (process.argv[2] !== "plus" || process.argv[2] !== "minus" ){
         result = "Invalid operation: " + (process.argv[2])
-    return result 
- }
-
+    }
+    return result
+}
 // Don't change anything below this line.
 module.exports = calculator;

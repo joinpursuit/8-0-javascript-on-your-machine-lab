@@ -5,11 +5,12 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-    if (process.argv[2] === 'plus') { 
-        for (i = 3 ; i < process.argv.length ; i++) {
-            let result = 0;
+    let result = 0 ;
+    if (process.argv[2] === 'plus') {
+          for (i = 3 ; i < process.argv.length ; i++) {
             result+= process.argv[i]
-        } console.log (result)
+        } 
+        console.log (result)
      }
 }
 

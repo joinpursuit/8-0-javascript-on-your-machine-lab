@@ -10,14 +10,14 @@ function calculator() {
         for (i = 3; i < process.argv.length; i++){
             result += parseInt(process.argv[i])
         }
-        console.log(result)
-    } else if (process.argv[2] === "minus"){
+        
+    } if (process.argv[2] === "minus"){
         result = parseInt(process.argv[3])
         for (i = 4; i < process.argv.length; i++){
             result -= parseInt(process.argv[i])
         } 
     
-    } 
+    } return result
  }
 
 // Don't change anything below this line.

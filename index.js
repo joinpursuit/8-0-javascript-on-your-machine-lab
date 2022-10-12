@@ -11,13 +11,19 @@ function calculator() {
             result += parseInt(process.argv[i])
         }
         
-    } if (process.argv[2] === "minus"){
+    } else if (process.argv[2] === "minus"){
         result = parseInt(process.argv[3])
         for (i = 4; i < process.argv.length; i++){
             result -= parseInt(process.argv[i])
         } 
     
-    } return result
+    } else if (process.argv[2] === "plus" || process.argv[2] === "minus" ){
+        result = "Invalid operation: " + (process.argv[2])
+    } else if (prprocess.argv.length === 3){
+        result = "No numbers provided..."
+    } else {
+        result = "No operation provided..."
+    }
  }
 
 // Don't change anything below this line.

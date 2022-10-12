@@ -10,7 +10,7 @@ function calculator() {
         result = "Invalid operation: " + (process.argv[2])
     } else if (prprocess.argv.length === 3){
         result = "No numbers provided..."
-    } if (prprocess.argv.length === 2){
+    } if (process.argv.length === 2){
         result = "No operation provided..."
     } if (process.argv[2] === "plus"){
         for (i = 3; i < process.argv.length; i++){

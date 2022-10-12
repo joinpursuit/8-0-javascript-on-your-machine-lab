@@ -24,6 +24,7 @@ function calculator() {
     } else {
         result = "No operation provided..."
     }
+    return result 
  }
 
 // Don't change anything below this line.

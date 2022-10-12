@@ -4,29 +4,28 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {
-    let result = 0
-    if (process.argv[2] !== "plus" && process.argv[2] !== "minus" ){
-        result = "Invalid operation: " + (process.argv[2])
-    } if (process.argv.length === 3){
-        result = "No numbers provided..."
-    } if (process.argv.length === 2){
-        result = "No operation provided..."
-    } if (process.argv[2] === "plus"){
-        for (i = 3; i < process.argv.length; i++){
-            result += parseInt(process.argv[i])
-        }
-        
-    } if (process.argv[2] === "minus"){
-        result = parseInt(process.argv[3])
-        for (i = 4; i < process.argv.length; i++){
+ function calculator() {
+    let result = 0 ;
+    if (process.argv[2] !== 'plus' && process.argv[2] !== 'minus') {
+     result = "Invalid operation: " + process.argv[2];
+  } if (process.argv.length === 3) {
+     result = "No numbers provided...";
+  } if (process.argv.length === 2) {
+     result = "No operation provided..."}
+    if (process.argv[2] === 'plus') {
+           for (i = 3 ; i < process.argv.length ; i++) {
+             result+= parseInt(process.argv[i])
+         } 
+         
+      } if (process.argv[2] === 'minus') {
+         result = parseInt(process.argv[3]);
+           for (i = 4 ; i < process.argv.length ; i++) {
             result -= parseInt(process.argv[i])
-        } 
-    
-    } if (process.argv[2] !== "plus" || process.argv[2] !== "minus" ){
-        result = "Invalid operation: " + (process.argv[2])
-    }
-    return result
-}
+         
+           }
+      }
+      return result 
+ }    
+  
 // Don't change anything below this line.
 module.exports = calculator;

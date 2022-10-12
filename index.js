@@ -11,6 +11,12 @@ function calculator() {
             result+= parseInt(process.argv[i])
         } 
         console.log (result)
+     } if (process.argv[2] === 'minus') {
+        result = parseInt(process.argv[3]);
+          for (i = 4 ; i < process.argv.length ; i++) {
+           result -= parseInt(process.argv[i])
+        
+          }
      }
 }
 

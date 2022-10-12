@@ -16,7 +16,7 @@ function calculator() {
         for (i = 4; i < process.argv.length; i++){
             result -= parseInt(process.argv[i])
         } 
-    console.log(result)
+    
     } 
  }
 

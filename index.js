@@ -6,7 +6,7 @@
  */
 function calculator() {
    let result = 0 ;
-   if (process.argv[2] !== 'plus' || process.argv[2] !== 'minus') {
+   if (process.argv[2] !== 'plus' && process.argv[2] !== 'minus') {
     result = "Invalid operation:" + process.argv[2];
  } if (process.argv.length === 3) {
     result = "No numbers provided...";

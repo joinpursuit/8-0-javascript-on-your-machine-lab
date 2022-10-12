@@ -8,7 +8,7 @@ function calculator() {
     let result = 0 ;
     if (process.argv[2] === 'plus') {
           for (i = 3 ; i < process.argv.length ; i++) {
-            result+= process.argv[i]
+            result+= parseInt(process.argv[i])
         } 
         console.log (result)
      }

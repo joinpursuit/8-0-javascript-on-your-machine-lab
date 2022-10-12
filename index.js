@@ -17,7 +17,7 @@ function calculator() {
             result -= parseInt(process.argv[i])
         } 
     
-    } else if (process.argv[2] === "plus" || process.argv[2] === "minus" ){
+    } else if (process.argv[2] !== "plus" || process.argv[2] !== "minus" ){
         result = "Invalid operation: " + (process.argv[2])
     } else if (prprocess.argv.length === 3){
         result = "No numbers provided..."

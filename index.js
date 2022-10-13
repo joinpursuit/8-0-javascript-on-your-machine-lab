@@ -5,7 +5,7 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-  // error handdling
+  // error handling
   let result = 0;
   if (process.argv.length < 3) {
     return 'No operation provided...';
@@ -32,7 +32,7 @@ function calculator() {
   }
 }
 
-  // calculator();
 
-
+calculator ();
+// Don't change anything below this line.
 module.exports = calculator;

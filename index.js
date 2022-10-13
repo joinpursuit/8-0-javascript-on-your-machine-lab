@@ -5,18 +5,26 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
+
+    // error handdling
     let result = 0;
-    //error handling//
     if (process.argv.length < 3) {
       return 'No operation provided...';
     } else if (!process.argv[3]) {
       return 'No numbers provided...';
     }
-}
-//addition testing//
 
+    // plus 
+    if (process.argv[2] === 'plus') {
+      for (let i = 3; i < process.argv.length; i++) {
+        result += Number(process.argv[i]);
+      }
+      return result;
+    }
+   
+  }
 
-
+  // calculator();
 
 
 module.exports = calculator;

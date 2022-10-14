@@ -24,8 +24,10 @@ function calculator() {
          result = Number(process.argv[3]);
          result += Number(process.argv[i]);
        
-     }
-        return result;
+     } else if (process.argv.length >= 4 && operator ==='minus') {
+        result = Number(process.argv[3]);
+        result -= Number(process.argv[i]);
+     } return result;
  }
      //error handling
      if (!operator) {
@@ -42,7 +44,7 @@ function calculator() {
      } // invalid operator... (passes test, not gonna change this anymore)
     
 }
-    //if we are adding more than two numbers
+
     
 
 

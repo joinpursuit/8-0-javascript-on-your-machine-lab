@@ -5,26 +5,28 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 // CLEAN CODE:
- function calculator() {
+function calculator() {
     const command = process.argv[2];
     const number = process.argv[3];
     let result = Number(number);
+    
     if (command === undefined) {
         return "No operation provided...";
     } else if (number === undefined) {
         return "No numbers provided...";
-    } else if (command != 'plus' && command != 'minus') {
-        return `Invalid operation: ${command}`;
     }
     for (let i = 4; i < process.argv.length; i++) {
         if (command === 'plus') {
             result += Number(process.argv[i]);
         } else if (command === 'minus') {
             result -= Number(process.argv[i]);
+        } else {
+            return `Invalid operation: ${command}`
         }
     }
     return result;
 }
+
 
 // // MESSY CODE:
 // let result = 0;

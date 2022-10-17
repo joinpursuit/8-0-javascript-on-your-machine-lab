@@ -13,6 +13,9 @@ function calculator() {
         if (isNaN(parseInt(tString))){
             return `Invalid operation: ${process.argv[2]}`;
         }
+        if (typeof parseInt(tString) === "number") {
+            return "No hamster provided...";
+        }
     } else if (!process.argv[3]) {
         return "No numbers provided..."
     } else if (tString === "plus") {
@@ -26,6 +29,8 @@ function calculator() {
             sumV -= parseInt(process.argv[i]);
         }
         return sumV;
+    } else {
+        return `No hamster provided...`
     }
 }
 

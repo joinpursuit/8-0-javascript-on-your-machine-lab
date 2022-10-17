@@ -16,7 +16,7 @@ function calculator() {
         for (let i = 3; i < process.argv.length; i++) {
             number += Number(process.argv[i]);
         }
-        return result;
+        return number;
     } else if (process.argv[2] === "minus") {
         let number = process.argv[3];
         for (let i = 4; i < process.argv.length; i++) {

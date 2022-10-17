@@ -7,7 +7,7 @@
 function calculator() {
     if (!process.argv[2]) {
         return (`No operation provided...`);
-    } else if (!process.argv[3] || Number(!process.argv[3]) === "NaN") {
+    } else if (!process.argv[3]) {
         return (`No numbers provided...`);
     } else if (process.argv[2] != "plus" && process.argv[2] != "minus") {
         return (`Invalid operation: ${process.argv[2]}`);

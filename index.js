@@ -5,9 +5,6 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 function calculator() {
-    // ✕ should return an error message if no operation is provided (2 ms) "No operation provided..."
-    // ✕ should return an error message if no numbers are provided  "No numbers provided..."
-    // ✕ should return an error message if the operation does not match 'plus' or 'minus' "Invalid operation: modulo"
     let total = 0
 if(process.argv.length === 2) { //if(!process.argv[2]) another way
     return  "No operation provided..."

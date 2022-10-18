@@ -4,7 +4,17 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    // ✕ should return an error message if no operation is provided (2 ms) "No operation provided..."
+    // ✕ should return an error message if no numbers are provided  "No numbers provided..."
+    // ✕ should return an error message if the operation does not match 'plus' or 'minus' "Invalid operation: modulo"
+if(process.argv.length === 2) { //if(!process.argv[2]) another way
+    return  "No operation provided..."
+} else if (!process.argv[3]){
+
+}
+
+}
 
 // Don't change anything below this line.
 module.exports = calculator;

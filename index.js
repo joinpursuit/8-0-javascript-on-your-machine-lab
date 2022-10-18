@@ -8,11 +8,24 @@ function calculator() {
     // ✕ should return an error message if no operation is provided (2 ms) "No operation provided..."
     // ✕ should return an error message if no numbers are provided  "No numbers provided..."
     // ✕ should return an error message if the operation does not match 'plus' or 'minus' "Invalid operation: modulo"
+    let total = 0
 if(process.argv.length === 2) { //if(!process.argv[2]) another way
     return  "No operation provided..."
-} else if (!process.argv[3]){
-
-}
+    } else if (!process.argv[3]){
+return  "No numbers provided..."
+        } else if (process.argv[2] !== "plus"  && process.argv[2] !== "minus") { //use && to check that we don't have valid operations
+            return `Invalid operation: ${process.argv[2]}` //error handling should always return what the user entererd
+    }  else if (process.argv[2] === "plus"){
+        for (let i = 3; i < process.argv.length; i++) {
+            total += Number(process.argv[i]); // total += parseInt(process.argv[i]) 2) ~~(double tilde )
+        } return total
+    } else if (process.argv[2] === "minus") {
+        total = Number(process.argv[3]) // we set total to [3] 
+        for (let i = 4; i < process.argv.length; i++) { //start at 4 since we assigned total, the value of the third index of process
+            total -= Number(process.argv[i]); // total += parseInt(process.argv[i]) 2) ~~(double tilde )
+        } return total
+    }
+    
 
 }
 

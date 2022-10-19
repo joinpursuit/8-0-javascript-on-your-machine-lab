@@ -8,18 +8,25 @@ const { run } = require("jest");
  */
 function calculator() {
     console.log(process.argv);
-    if (process.argv[3] !== 'plus' || process.argv[3] !== 'minus'){
-        return `Invalid operation: ${process.argv[3]}`;
-    } else if (process.argv[3] === undefined){
+
+    if ( !process.argv[2] ){
+        return `No operation provided...`
+    } else if ( !process.argv[3] ){
         return 'No numbers provided...';
-    }else if (process.argv[2] === undefined){
-        return 'No operation provided'
-    } else if (process.argv[3] !== 'plus' || 'minus'){
-        return `Invalid operation: ${process.argv[3]}`;
-    }else if  (process.argv[2] === 'plus'){
-        return (Number(process.argv[3] + process.argv [Array.length-1]))
-    } else if (process.argv[2] === 'minus'){
-        return (Number(process.argv[3] - process.argv [Array.length-1]))
+    } else if ( process.argv[2] !== 'plus' && process.argv[2] !=='minus' ){
+        return `Invalid operation: ${process.argv[2]}`;
+    }else if ( process.argv[2] === 'plus' ){
+        let sum = 0
+        for(let i = 3; i < process.argv.length; i++){
+            sum += Number( process.argv[i])
+        }
+        return sum;
+    } else if ( process.argv[2] === 'minus'){
+        let product = Number( process.argv[3] )
+        for(let i = 4; i < process.argv.length;i++){
+            product -= Number( process.argv[i] )
+        }
+        return product;
 }
 }
 // Don't change anything below this line.

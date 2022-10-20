@@ -6,24 +6,35 @@
  */
 // CLEAN CODE:
 function calculator() {
+    // assigning the operation if there's any
     const command = process.argv[2];
+    // assigning the first number if there's number
     const number = process.argv[3];
+    //converting the String type of number to the Number type
     let result = Number(number);
     
+    // if there's no operation
     if (command === undefined) {
         return "No operation provided...";
+    // if there's no number
     } else if (number === undefined) {
         return "No numbers provided...";
     }
+    // looping from second number,
+    // because the first number is assigned to the variable result
     for (let i = 4; i < process.argv.length; i++) {
         if (command === 'plus') {
+            // adding to the first number
             result += Number(process.argv[i]);
         } else if (command === 'minus') {
+            // subtracting the first number
             result -= Number(process.argv[i]);
         } else {
-            return `Invalid operation: ${command}`
+            // if the operation is not plus or minus
+            return `Invalid operation: ${command}`;
         }
     }
+    // return the total value;
     return result;
 }
 

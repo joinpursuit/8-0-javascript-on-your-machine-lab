@@ -5,15 +5,34 @@
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
 
-console.log(process.argv.length) //an array we can pass arguments into
+
 function calculator() {
-    let processArr = process.argv
-    let sum;
-   for(let i = 3; i < processArr.length; i++){
-    if(processArr.includes('plus')){
-        
-    }
-   }
+    let array = process.argv
+    let result = 0;
+
+     if (array.length < 3){
+         return 'No operation provided...'
+     }
+     else if (!array[3]){
+         return 'No numbers provided...'
+     }
+     if (array[2] === 'plus') {
+         for (let i = 3; i < array.length; i++) {
+             result += Number(array[i]);
+         }
+         return result
+     }
+     else if (array[2] === 'minus'){
+         result = array[3]
+            for (let i = 4; i < array.length; i++){
+                result -= Number(array[i]);
+            }
+          return result
+     }
+
+    else {
+        return `Invalid operation: ${array[2]}`;
+        }
         
 
 } 
